@@ -22,8 +22,8 @@ app.get('/', (req, res) => {
   res.json({
     status: 'OK',
     message: 'Kommo → Render → Power BI',
-    integration_id: KOMMO_INTEGRATION_ID ? KOMMO_INTEGRATION_ID : null
-  });
+    integration_id: KOMMO_INTEGRATION_ID || null
+  }); 
 });
 
 app.get('/leads', async (req, res) => {
